@@ -2,14 +2,18 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import UserCard, { Generic } from "./Generic";
 import { Product } from "./Product";
+import { Task } from "./Task";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <>
-    {/* <Generic /> */}
+    <Task tittle="Task completed" finished={true}/>
+    <Task tittle="Task not completed"/>
+    <br/>
+    <Generic />
     <UserCard name="Jorge" age={21} isMale={true} />
-    <Product producName="Nutella" price={500} description="Esta rica"/>
-    <Product price={0}/>
+    <Product producName="Nutella" price={500} description="Esta rica" />
+    <Product price={0} />
   </>
 );

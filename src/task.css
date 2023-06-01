@@ -1,0 +1,13 @@
+.unTask {
+    background: rgb(196, 99, 118);
+    color: black;
+    padding: 30px;
+    margin: 20px;
+}
+
+.taksF {
+    background: rgb(99, 196, 128);
+    color: white;
+    padding: 30px;
+    margin: 20px;
+}
