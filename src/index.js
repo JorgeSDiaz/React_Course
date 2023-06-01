@@ -10,5 +10,6 @@ root.render(
     {/* <Generic /> */}
     <UserCard name="Jorge" age={21} isMale={true} />
     <Product producName="Nutella" price={500} description="Esta rica"/>
+    <Product price={0}/>
   </>
 );
