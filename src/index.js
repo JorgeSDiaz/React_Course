@@ -3,11 +3,13 @@ import ReactDOM from "react-dom/client";
 import UserCard, { Generic } from "./Generic";
 import { Product } from "./Product";
 import { Task } from "./Task";
+import Hello from "./Hello";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <>
+    <Hello />
     <Task tittle="Task completed" finished={true}/>
     <Task tittle="Task not completed"/>
     <br/>
