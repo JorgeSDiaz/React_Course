@@ -16,7 +16,6 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <>
-
     <Post />
     {/* <form
       onSubmit={(e) => {
