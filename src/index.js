@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-import { Button } from "./Button";
+import { Post } from "./Post";
+// import { Button } from "./Button";
 // import UserCard, { Generic } from "./Generic";
 // import { Product } from "./Product";
 // import { Task } from "./Task";
@@ -9,13 +10,15 @@ import { Button } from "./Button";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-function handleClick() {
-  console.log("click");
-}
+// function handleClick() {
+//   console.log("click");
+// }
 
 root.render(
   <>
-    <form
+
+    <Post />
+    {/* <form
       onSubmit={(e) => {
         e.preventDefault();
         alert("Submitted: " + e.target[0].value);
@@ -32,7 +35,7 @@ root.render(
       />
       <button type="submit">Submit</button>
     </form>
-    <Button onClick={handleClick} />
+    <Button onClick={handleClick} /> */}
     {/* <Hello />
     <Task tittle="Task completed" finished={true}/>
     <Task tittle="Task not completed"/>
