@@ -1,35 +1,44 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { useState } from "react";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-const users = [
-  {
-    id: 1,
-    name: "John",
-    image: "https://robohash.org/user1",
-  },
-  {
-    id: 2,
-    name: "Joe",
-    image: "https://robohash.org/user2",
-  },
-  {
-    id: 3,
-    name: "Joseph",
-    image: "https://robohash.org/user3",
-  },
-];
+function Counter() {
+  const [counter, setCounter] = useState(0);
+
+  return (
+    <>
+      <h1>Counter: {counter}</h1>
+      <button
+        onClick={() => {
+          setCounter(counter + 10);
+        }}
+      >
+        Increment
+      </button>
+      <button onClick={() => setCounter(counter - 10)}>Decrement</button>
+      <button onClick={() => setCounter(0)}>Reset</button>
+    </>
+  );
+}
+
+function Input() {
+  const [value, setValue] = useState("");
+
+  return (
+    <>
+      <input onChange={e => {setValue(e.target.value)}} type="text" />
+      <button onClick={() => console.log(value)}>Save</button>
+    </>
+  );
+}
 
 root.render(
   <>
-    {users.map((user) => {
-      return (
-        <div key={user.id}>
-          <h1>{user.name}</h1>
-          <img src={user.image} alt={user.name} />
-        </div>
-      );
-    })}
+    <Counter />
+    <br/>
+    <br/>
+    <Input />
   </>
 );
