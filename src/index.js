@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import { useState } from "react";
 
@@ -25,6 +25,7 @@ function Counter() {
 
 function Input() {
   const [value, setValue] = useState("");
+  useEffect(() => {console.log("value changed")}, [value]);
 
   return (
     <>
